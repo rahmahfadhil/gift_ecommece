@@ -1,0 +1,65 @@
+.CategoryiesContanier{
+      /* background-color: aquamarine; */
+      width: 90%;
+      height: auto;
+      margin:auto;
+      display: flex;
+      justify-content:space-between;
+      flex-direction:column;
+      text-align: center;
+      box-sizing: border-box;
+      
+}
+.CategoryiesContanierbox{
+    width: 100%;
+      height: auto;
+      margin:auto;
+      display: flex;
+      justify-content:space-between;
+      flex-direction:column;
+      text-align: center;
+      
+}
+.CategoryiesContanier h1{
+    border-bottom: solid rgb(255, 95, 188);
+    width: 70%;
+    margin:10px auto;
+    padding:10px;
+    margin-bottom:10px;
+}
+.CategoryiesContanierDep{
+    margin:10px auto;
+    background-color: bisque;
+    width: 100%;
+    height: 50vh;
+    background-image: url(./img/gift.jpg);
+    background-size: cover;
+    margin-bottom: 20px;
+}
+.CategoryiesContanierDepTitle{
+    background-color: rgba(255, 251, 251, 0.438);
+    width: 50%;
+    height: 20%;
+    margin:10px 10px;
+    text-align: center;
+}
+@media screen and (min-width:1000px){
+    .CategoryiesContanierbox{
+        width: 100%;
+          height: auto;
+          margin:auto;
+          display: flex;
+          justify-content:space-between;
+          flex-wrap: wrap;
+          flex-direction:row;
+          /* text-align: center; */
+          
+    }
+    .CategoryiesContanierDep{
+       
+        width: 30%;
+        height: 50vh;
+      
+    }
+    
+}

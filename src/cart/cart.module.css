@@ -1,0 +1,113 @@
+.cardPage{
+    /* background-color: yellow; */
+    width: 100%;
+    height: auto;
+}
+.cardPageContainer{
+    /* background-color:teal; */
+    width: 90%;
+    height: 60vh;
+    margin:auto;
+    
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    border-top:  1px solid  rgb(255, 130, 151);
+    border-bottom:  1px solid  rgb(255, 130, 151);
+
+}
+.cardPageContainerDivider{
+display: flex;
+flex-basis: calc(50% - 1px);
+/* background-color: violet; */
+
+
+}
+.cardPageContainerDivider:last-child{
+    margin-bottom: 20px;
+
+}
+.cardPageContainerDivider:first-child{
+    margin-top: 20px;
+
+}
+.cardPageContainerDividerImg{
+    margin: 15px auto;
+
+    width: 70%;
+    height: 70%;
+    /* background-image: url(../firstpage/img/gift.jpg); */
+    background-size: cover;
+}
+.cardPageContainerDividerBoxImg{
+    width: 50%;
+    height: 100%;
+
+}
+.cardPageContainerDividerImg i{
+   margin:auto;
+    margin-left: 2px;
+    padding: auto;
+    background-color:rgb(233, 224, 226);
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+
+}
+.cardPageContainerDividerContent h3{
+    margin :20px auto;
+}
+.cardPageContainerDividercount {
+    /* background-color:red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.cardPageContainerDividertotalprice{
+    /* background-color:aqua; */
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid rgb(255, 136, 156);
+
+
+}
+.cardPageContainerDividercountIncDec{
+    /* background-color:teal; */
+    display: flex;
+    flex-basis: calc(33% - 2px);
+    margin: auto;
+    height: 30%;
+    border: 1px solid rgb(255, 136, 156);
+    color:rgb(255, 136, 156);
+    font-size:30px;
+    text-align: center;
+    padding:2px 8px;
+}
+
+@media screen and (min-width:1000px){
+    
+    .cardContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* background-color:red; */
+        height: auto;
+    }
+    .cardPageContainer{
+        width: 30%;
+        margin:20px;
+        
+     
+    
+    }
+   
+    
+}
+
+

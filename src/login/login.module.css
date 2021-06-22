@@ -1,0 +1,64 @@
+.loginPage{
+    /* background-color: yellow; */
+    width: 100%;
+    height: auto;
+    
+}
+.loginPageForm{
+    margin: auto;
+}
+
+.loginPageForm div{
+    /* background-color:aquamarine; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    width: 100%;
+    margin-bottom: 10px;
+    
+    
+    
+
+}
+.loginPageForm div input{
+    width: 250px;
+    height: 70px;
+    padding: 0 20px;
+    margin:auto;
+    margin-bottom:30px;
+   
+
+
+}
+.loginPageForm div{
+    display: flex;
+    justify-content:space-between;
+    margin:auto auto;
+
+}
+.loginPageForm input{
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid #75757570;
+   
+    color: #757575d3;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.63)
+
+}
+.loginPageForm a{
+margin:auto;
+margin-bottom:30px;
+}
+
+.loginPageForm button{
+    height: 40px;
+    width: 50%;
+    margin: auto;
+    border-radius: 50px;
+    background-color:rgba(255, 95, 188, 0.247);
+    
+}

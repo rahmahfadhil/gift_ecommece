@@ -1,0 +1,86 @@
+.CategoriesItemspage{
+    /* background-color: turquoise; */
+
+
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+.CategoriesItemsContainer{
+    /* background-color:red; */
+    width: 90%;
+    height: 100%;
+    margin:auto;
+}
+.CategoriesItemsContainerContent{
+    background-color:rgb(241, 239, 243);
+    box-shadow: 0px 0px 3px 3px rgba(240, 62, 172, 0.1);
+
+    width: 100%;
+    height: 80vh;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+.CategoriesItemsContentDivider{
+/* background-color:yellowgreen; */
+flex-basis: calc(50% - 2px);
+}
+.CategoriesItemsImg{
+    background-color: bisque;
+   width: 100%;
+   height: 100%;
+    /* background-image: url(../firstpage/img/gift.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.CategoriesItemsContent{
+    width: 100%;
+    height: 100%;
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+}
+.CategoriesItemsDividerContent{
+    /* background-color:rgb(78, 50, 205); */
+flex-basis: calc(33% - 2px);
+font-size:20px;
+margin:auto;
+
+
+}
+.CategoriesItemsDividerContent i{
+    color:rgb(230, 227, 229);
+    background-color:rgb(51, 51, 51);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+margin:10px;
+    padding:9px;
+}
+.CategoriesItemsDividerContent i:hover{
+    background-color:rgb(255, 140, 194);
+}
+@media screen and (min-width:1000px){
+    .CategoriesItemspage{
+        /* background-color: turquoise; */
+    
+   
+        
+    }
+    .CategoriesItemsContainer{
+        /* background-color:red; */
+       display: flex;
+       flex-direction:row;
+       justify-content:space-between;
+       flex-wrap: wrap;
+       width: 90%;
+    }
+    .CategoriesItemsContainerContent{
+        width: 30%;
+        margin:10px;
+    }
+
+}
