@@ -22,7 +22,7 @@
 }
 
 .NewItemsSectioncontent{
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 200px;
     margin:auto;
@@ -32,7 +32,6 @@
     margin-bottom: 5px;
 }
 .NewItemsSectioncontentImg{
-    background-image: url(./img/mm.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -55,7 +54,7 @@
         width: 100%;
     }
     .NewItemsSectioncontent{
-        background-color: bisque;
+        background-color: rgb(255, 255, 255);
         width: 30%;
         height: 200px;
         margin:10px;

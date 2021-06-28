@@ -1,7 +1,7 @@
 import classes from './appbar.module.css';
 import { useState } from 'react'
-import {useHistory} from 'react-router-dom'
-import {Link , animateScroll} from 'react-scroll'
+import { useHistory } from 'react-router-dom'
+import { Link, animateScroll } from 'react-scroll'
 
 
 export default function AppBar() {
@@ -39,13 +39,12 @@ export default function AppBar() {
                                         <a href="/" className={classes.navLink} >Home</a>
                                     </li>
                                     <li>
-                                        <a href="#about" className={classes.navLink} >About</a>
+                                        <a href="/favourite" className={classes.navLink} >Favourites</a>
                                     </li>
+
+
                                     <li>
-                                        <a href="#resume" className={classes.navLink} >resume</a>
-                                    </li>
-                                    <li>
-                                        <Link to='contactme' spy={true} smooth={true} duration={500}  className={classes.navLink}>Contact</Link>
+                                        <Link to='contactme' spy={true} smooth={true} duration={500} className={classes.navLink}>Contact</Link>
                                     </li>
 
                                 </ul></div>
@@ -60,12 +59,12 @@ export default function AppBar() {
                 </div>
                 <div className={classes.appbarContainerDivider}>
 
-                    <a href="http://rahma97.fikracamp.com" className={classes.appbarContainerDividerContentbasket}><img src='shopping-basket.svg' alt='ah' onClick={()=>{history.push('/cart')}}></img></a>
+                    <a href="http://rahma97.fikracamp.com" className={classes.appbarContainerDividerContentbasket}><img src='shopping-basket.svg' alt='ah' onClick={() => { history.push('/cart') }}></img></a>
                     <i className={classes.appbarcountNumber}>0</i>
 
                 </div>
-                <div className={classes.scrollToTap} onClick={()=>animateScroll.scrollToTop({
-                  
+                <div className={classes.scrollToTap} onClick={() => animateScroll.scrollToTop({
+
                 })}><i class="fas fa-angle-double-up" ></i></div>
 
 

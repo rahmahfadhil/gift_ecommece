@@ -2,11 +2,10 @@
     --black:rgb(27, 27, 27);
     --white:#fff;
     --pink:rgb(255, 255, 255);
-    --deeppink:#C56183;
+    --deeppink:#B34180;
 }
 .CategoriesItemspage{
     /* background-color: turquoise; */
-
 
     width: 100%;
     height: auto;
@@ -20,16 +19,14 @@
 }
 .CategoriesItemsContainerContent{
     background-color:var(--white);
-    
-    box-shadow: 0px 0px 3px 3px rgba(75, 75, 75, 0.178);
+    box-shadow: 0px 0px 3px 3px rgba(75, 75, 75, 0.425);
 
-    width: 90%;
+    width: 100%;
     height: 70vh;
-    margin:20px auto;
+    margin:auto;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
-    padding-bottom: 30px;
 }
 .CategoriesItemsContentDivider{
 /* background-color:yellowgreen; */
@@ -59,7 +56,7 @@ justify-content:space-around;
     /* background-color:rgb(78, 50, 205); */
 flex-basis: calc(33% - 2px);
 font-size:20px;
-margin: auto;
+margin: auto ;
 display:flex;
 flex-direction:row;
 text-align:center;
@@ -70,8 +67,8 @@ justify-content:space-evenly;
 }
 
 .CategoriesItemsDividerContent div i{
-    color:var(--white);
-    background-color:var(--black);
+    color:rgb(230, 227, 229);
+    background-color:rgb(51, 51, 51);
     border-radius: 20px;
     width: 40px;
     height: 40px;
@@ -82,7 +79,7 @@ margin:10px;
 
 }
 .CategoriesItemsDividerContent div i:hover{
-    background-color:var(--deeppink);
+    background-color:rgb(255, 140, 194);
 }
 .CategoriesItemsDividerContent h4{
     text-align:center;
@@ -100,7 +97,8 @@ margin:10px;
        flex-direction:row;
        justify-content:space-between;
        flex-wrap: wrap;
-       width: 85%;
+       width: 90%;
+       
     }
     .CategoriesItemsContainerContent{
         width: 30%;

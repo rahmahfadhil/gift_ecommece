@@ -4,9 +4,11 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import FirstPage from './firstpage/firstpage.js';
 import Footer from './footer'
 import CategoriesItems from './categoresitems/categoriesitems'
+import Favourite from './favourite/favourite'
+
 import Login from './login/login'
 import Cart from './cart/cart'
-import { useState ,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 function App() {
   const [items, setItems] = useState([
     {
@@ -22,18 +24,29 @@ function App() {
       price: '$10'
     }
   ]);
-  const [itemcart,setItemcart] = useState([]);
- 
-  const handelAddItemToCart= async(id,title,image,price,quantity)=>{
-    const  items=await {id,title,image,price,quantity}
-   setItemcart( [...itemcart,items])
-    
+  const [itemcart, setItemcart] = useState([]);
+  const [itemfavourites, setItemfavourites] = useState([]);
+
+const handelAddItemToFavourite=async (id,title,image,price,quantity)=>{
+  if (id !== undefined) {
+    const items = await { id, title, image, price, quantity }
+    setItemfavourites([...itemfavourites, items])
   }
-  useEffect(()=>{
-    
+}
+  const handelAddItemToCart = async (id, title, image, price, quantity) => {
+    if (id !== undefined) {
+      const items = await { id, title, image, price, quantity }
+      setItemcart([...itemcart, items])
+    }
+
+
+  }
+
+  useEffect(() => {
+    handelAddItemToFavourite();
     handelAddItemToCart();
-  },[])
-  console.log(`rahma ${itemcart}`)
+  }, [])
+  console.log(`rahma ${itemfavourites}`)
   return (
     <div className="App">
       <BrowserRouter>
@@ -43,14 +56,17 @@ function App() {
           <Route exact path="/">
             <FirstPage />
           </Route>
-          <Route path="/categories-items">
-            <CategoriesItems value={{items, setItems,handelAddItemToCart}} />
+          <Route path="/categories-items/:categoryName">
+            <CategoriesItems value={{ items, setItems, handelAddItemToCart ,handelAddItemToFavourite}} />
           </Route>
           <Route path="/login">
             <Login />
           </Route>
           <Route path="/cart" >
-            <Cart value={{itemcart,items}} />
+            <Cart value={{ itemcart, items }} />
+          </Route>
+          <Route path="/favourite">
+            <Favourite  value={{ itemfavourites }} />
           </Route>
 
         </Switch>

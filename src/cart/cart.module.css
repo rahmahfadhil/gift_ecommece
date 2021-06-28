@@ -1,8 +1,16 @@
+:root{
+    --black:rgb(27, 27, 27);
+    --white:#fff;
+    --pink:rgb(255, 255, 255);
+    --deeppink:#C56183;
+}
 .cardPage{
     /* background-color: yellow; */
     width: 100%;
     height: auto;
+    margin:auto;
 }
+
 .cardPageContainer{
     /* background-color:teal; */
     width: 90%;
@@ -12,8 +20,8 @@
     display: flex;
     flex-direction:column;
     justify-content:space-around;
-    border-top:  1px solid  rgb(255, 130, 151);
-    border-bottom:  1px solid  rgb(255, 130, 151);
+    border-top:  1px solid  var(--deeppink);
+    border-bottom:  1px solid  var(--deeppink);
 
 }
 .cardPageContainerDivider{
@@ -48,7 +56,7 @@ flex-basis: calc(50% - 1px);
    margin:auto;
     margin-left: 2px;
     padding: auto;
-    background-color:rgb(233, 224, 226);
+    background-color:var(--gray);
     width: 15px;
     height: 15px;
     border-radius: 10px;
@@ -73,7 +81,7 @@ flex-basis: calc(50% - 1px);
     text-align: center;
     margin: auto;
     padding: 10px;
-    border: 1px solid rgb(255, 136, 156);
+    border: 1px solid var(--deeppink);
 
 
 }
@@ -83,14 +91,15 @@ flex-basis: calc(50% - 1px);
     flex-basis: calc(33% - 2px);
     margin: auto;
     height: 30%;
-    border: 1px solid rgb(255, 136, 156);
-    color:rgb(255, 136, 156);
+    border: 1px solid var(--deeppink);
+    color:var(--deeppink);
     font-size:30px;
     text-align: center;
     padding:2px 8px;
 }
 
 @media screen and (min-width:1000px){
+   
     
     .cardContainer{
         display: flex;
@@ -98,6 +107,7 @@ flex-basis: calc(50% - 1px);
         justify-content: space-between;
         /* background-color:red; */
         height: auto;
+        
     }
     .cardPageContainer{
         width: 30%;

@@ -1,39 +1,28 @@
-import classes from './categoriesitems.module.css'
+import classes from './favurate.module.css';
 import OrderSlider from '../firstpage/orderslider'
 import { useHistory, useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
-export default function CategoriesItems(props) {
-    // const items = props.value.items;
-    // const setItems = props.value.setItems;
-    const { categoryName } = useParams();
-    const [categories, setCategories] = useState([]);
-
-    const quatity = 1;
-    useEffect(() => {
-        fetch(`http://specoper99.fikracamp.com:29999/products/category/${categoryName}`, {})
-
-            .then(res => res.json())
-            .then(data => setCategories(data.products))
-    }, [])
-
-    console.log(categories);
+export default function Favourite(props) {
+   const itemfavourites = props.value.itemfavourites
+    const [favourite, setfavourite] = useState([]);
 
 
-    const handelAddItemToCart = props.value.handelAddItemToCart;
-    const handelAddItemToFavourite= props.value.handelAddItemToFavourite
 
+
+
+    const handelAddItemToFavourite = props.value.handelAddItemToFavourite;
+    const handelAddItemToCart=props.value.handelAddItemCart;
     const history = useHistory();
 
-    // console.log(items)
-    console.log(handelAddItemToCart)
+    console.log(itemfavourites)
     return (
         <>
-            <div className={classes.CategoriesItemspage}>
+            <div className={classes.CategoriesItemspage} id='favourite'>
                 <OrderSlider />
                 <divs className={classes.CategoriesItemsContainer}>
-                    {categories?.map((item) => (
-                        <div key={categories.id} className={classes.CategoriesItemsContainerContent}>
+                    {itemfavourites?.map((item) => (
+                        <div key={item.id} className={classes.CategoriesItemsContainerContent}>
 
                             <div className={classes.CategoriesItemsContentDivider}>
                                 <div className={classes.CategoriesItemsImg} style={{ backgroundImage: `url('${item.image}')` }}> </div>
@@ -49,11 +38,10 @@ export default function CategoriesItems(props) {
                                             <i className="fas fa-shopping-cart">
 
                                             </i></div>
-                                        <div  onClick={() => {
+                                        <div onClick={() => {
                                             handelAddItemToFavourite(item.id, item.title, item.image, item.price, item.quantity)
-                                            history.push('/favourite')
+                                            history.push('/favourites')
                                         }}>
-                                        
                                             <i className="fas fa-heart"></i>
                                         </div>
                                     </div>
